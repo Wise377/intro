@@ -12,3 +12,10 @@ p
   color: white;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.container,
+.container2
+{
+ background-color: blue;
+ border-radius: .2rem;
+ 
+}
