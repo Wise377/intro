@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FreshGrocer - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background: #f8f8f8; }
+        header { background: #4CAF50; color: white; padding: 20px 0; text-align: center; }
+        nav { background: #388E3C; padding: 10px 0; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        .hero { background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat; color: white; padding: 60px 20px; text-align: center; }
+        .hero h1 { font-size: 3em; margin-bottom: 10px; }
+        .hero p { font-size: 1.5em; }
+        .products { display: flex; flex-wrap: wrap; justify-content: center; margin: 40px 0; }
+        .product-card { background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 15px; width: 220px; padding: 20px; text-align: center; }
+        .product-card img { width: 100px; height: 100px; object-fit: cover; border-radius: 50%; }
+        .product-card h3 { margin: 15px 0 10px; }
+        .product-card p { color: #555; }
+        footer { background: #333; color: #fff; text-align: center; padding: 15px 0; margin-top: 40px; }
+        @media (max-width: 700px) {
+            .products { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FreshGrocer</h1>
+        <p>Your one-stop shop for fresh groceries!</p>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+    </nav>
+    <section class="hero">
+        <h1>Welcome to FreshGrocer</h1>
+        <p>Fresh produce, quality products, and fast delivery to your doorstep.</p>
+        <a href="#" style="background:#fff;color:#4CAF50;padding:10px 25px;border-radius:5px;text-decoration:none;font-weight:bold;">Shop Now</a>
+    </section>
+    <section>
+        <h2 style="text-align:center;margin-top:40px;">Popular Categories</h2>
+        <div class="products">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=200&q=80" alt="Fruits">
+                <h3>Fruits</h3>
+                <p>Fresh and juicy seasonal fruits.</p>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=200&q=80" alt="Vegetables">
+                <h3>Vegetables</h3>
+                <p>Organic and locally sourced veggies.</p>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=200&q=80" alt="Dairy">
+                <h3>Dairy</h3>
+                <p>Milk, cheese, butter, and more.</p>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=200&q=80" alt="Bakery">
+                <h3>Bakery</h3>
+                <p>Freshly baked breads and pastries.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        &copy; 2024 FreshGrocer. All rights reserved.
+    </footer>
+</body>
+</html>
