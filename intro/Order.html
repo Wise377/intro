@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FoodExpress - Place Your Order</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: Arial, sans-serif; background: #f8f8f8; margin: 0; }
+        .container { max-width: 500px; margin: 40px auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px #ddd; }
+        h1 { text-align: center; color: #e67e22; }
+        label { display: block; margin-top: 15px; }
+        input, select, textarea { width: 100%; padding: 8px; margin-top: 5px; border-radius: 4px; border: 1px solid #ccc; }
+        button { background: #e67e22; color: #fff; border: none; padding: 12px 0; width: 100%; border-radius: 4px; font-size: 16px; margin-top: 20px; cursor: pointer; }
+        button:hover { background: #cf711f; }
+        .success { color: green; text-align: center; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Place Your Order</h1>
+        <form id="orderForm">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="address">Delivery Address</label>
+            <textarea id="address" name="address" rows="2" required></textarea>
+
+            <label for="food">Select Food Item</label>
+            <select id="food" name="food" required>
+                <option value="">-- Choose an item --</option>
+                <option value="Pizza">Pizza</option>
+                <option value="Kales">Kales</option>
+                <option value="Meat">Meat</option>
+                <option value="Githeri">Githeri</option>
+                <option value="Ugali">Ugali</option>
+            </select>
+
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+
+            <label for="notes">Additional Notes</label>
+            <textarea id="notes" name="notes" rows="2"></textarea>
+
+            <button type="submit">Place Order</button>
+        </form>
+        <div class="success" id="successMsg" style="display:none;">
+            Thank you! Your order has been placed.
+        </div>
+    </div>
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('successMsg').style.display = 'block';
+            this.reset();
+        });
+    </script>
+</body>
+</html>

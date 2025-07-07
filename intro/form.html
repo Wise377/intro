@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple HTML Form</title>
+</head>
+<link rel="stylesheet" href="form.css">
+<body>
+    <h1>FORM CREATION</h1>
+    <p>Fill out the form below:</p>
+    <div>
+        <form action="/submit" method="post">
+            <label for="name">Name:</label>
+            <input class="text" type="text" id="name" name="name" required>
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input class="text" type="email" id="email" name="email" required>
+            <br><br>
+
+            <label for="message">Message:</label>
+            <input class="text" type="text" id="message" name="message" rows="4" required>
+            <br><br>
+        </form>
+        <br><br>
+        <label for="age">Age:</label>
+        <input class="text" type="number" id="age" name="age" min="0" required>
+        <br><br>
+
+        <label for="gender">Gender:</label>
+        <select class="text" id="gender" name="gender" required>
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <br><br>
+
+        <label for="city">City:</label>
+        <input class="text" type="text" id="city" name="city" required>
+        <br><br>
+        <label for="country-select">Select Country:</label>
+        <select class="text" id="country-select" name="country-select" required>
+            <option value="">Select</option>
+            <option value="Kenya">Kenya</option>
+            <option value="USA">USA</option>
+            <option value="Germany">Germany</option>
+            <option value="Australia">Australia</option>
+            <option value="Japan">Japan</option>
+        </select>
+        <br><br>
+        <input class="submit" form="form" type="submit" value="Submit">
+    </div>
+</body>
+
+</html>

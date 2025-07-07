@@ -1,0 +1,24 @@
+body 
+{
+  background-color: brown;
+  background-image: url(lion.png);
+  background-image: url(John.gif);
+}
+h1
+{
+    font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+p
+{
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.container,
+.container2
+{
+ background-color: blue;
+ border-radius: .2rem;
+ 
+ 
+}

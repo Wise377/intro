@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>InspireHub - Discover Your Next Idea</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: #222;
+            min-height: 100vh;
+        }
+        header {
+            background: rgba(255,255,255,0.95);
+            padding: 2rem 0 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: #2575fc;
+            letter-spacing: 2px;
+        }
+        header p {
+            margin: 0.5rem 0 0 0;
+            color: #444;
+            font-size: 1.2rem;
+        }
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            background: rgba(255,255,255,0.98);
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+            padding: 2rem 2.5rem;
+        }
+        .ideas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .idea-card {
+            background: #f7faff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(37,117,252,0.07);
+            transition: transform 0.15s;
+        }
+        .idea-card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 8px 24px rgba(37,117,252,0.13);
+        }
+        .idea-title {
+            font-size: 1.2rem;
+            color: #6a11cb;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        .idea-desc {
+            color: #333;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        footer {
+            text-align: center;
+            color: #fff;
+            margin: 3rem 0 1rem 0;
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+        @media (max-width: 600px) {
+            main {
+                padding: 1rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>InspireHub</h1>
+        <p>Discover your next big idea. Get inspired. Build something amazing.</p>
+    </header>
+    <main>
+        <h2 style="color:#2575fc;">Featured Ideas</h2>
+        <div class="ideas">
+            <div class="idea-card">
+                <div class="idea-title">Personal Finance Tracker</div>
+                <div class="idea-desc">A web app to track expenses, set budgets, and visualize spending habits with charts and reminders.</div>
+            </div>
+            <div class="idea-card">
+                <div class="idea-title">Recipe Sharing Platform</div>
+                <div class="idea-desc">Share, discover, and rate recipes. Includes meal planning, shopping lists, and nutrition info.</div>
+            </div>
+            <div class="idea-card">
+                <div class="idea-title">Study Buddy</div>
+                <div class="idea-desc">Connect students for collaborative study sessions, flashcards, and progress tracking.</div>
+            </div>
+            <div class="idea-card">
+                <div class="idea-title">Local Event Finder</div>
+                <div class="idea-desc">Find and share local events, workshops, and meetups based on your interests and location.</div>
+            </div>
+            <div class="idea-card">
+                <div class="idea-title">Mood Journal</div>
+                <div class="idea-desc">A private journal to track moods, triggers, and patterns, with analytics and motivational quotes.</div>
+            </div>
+            <div class="idea-card">
+                <div class="idea-title">Habit Builder</div>
+                <div class="idea-desc">Set goals, build habits, and track your progress with streaks and reminders.</div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        &copy; 2025 InspireHub. Dream. Build. Inspire.
+    </footer>
+</body>
+</html>

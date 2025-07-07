@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grocery Shop</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f8f8f8; margin: 0; padding: 0; }
+        .container { max-width: 800px; margin: 40px auto; background: #fff; padding: 24px; border-radius: 8px; box-shadow: 0 2px 8px #ccc; }
+        h1 { text-align: center; color: #2d7a2d; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 12px; border-bottom: 1px solid #ddd; text-align: left; }
+        th { background: #e8f5e9; }
+        .add-btn { background: #4caf50; color: #fff; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; }
+        .add-btn:hover { background: #388e3c; }
+        #cart { margin-top: 32px; }
+        #cart-items { margin-bottom: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Grocery Shop</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price ($)</th>
+                    <th>Add to Cart</th>
+                </tr>
+            </thead>
+            <tbody id="shop-items">
+                <tr>
+                    <td>Apples (1kg)</td>
+                    <td>2.50</td>
+                    <td><button class="add-btn" onclick="addToCart('Apples', 2.50)">Add</button></td>
+                </tr>
+                <tr>
+                    <td>Bread (1 loaf)</td>
+                    <td>1.80</td>
+                    <td><button class="add-btn" onclick="addToCart('Bread', 1.80)">Add</button></td>
+                </tr>
+                <tr>
+                    <td>Milk (1L)</td>
+                    <td>1.20</td>
+                    <td><button class="add-btn" onclick="addToCart('Milk', 1.20)">Add</button></td>
+                </tr>
+                <tr>
+                    <td>Eggs (12pcs)</td>
+                    <td>2.00</td>
+                    <td><button class="add-btn" onclick="addToCart('Eggs', 2.00)">Add</button></td>
+                </tr>
+                <tr>
+                    <td>Rice (1kg)</td>
+                    <td>1.50</td>
+                    <td><button class="add-btn" onclick="addToCart('Rice', 1.50)">Add</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div id="cart">
+            <h2>Your Cart</h2>
+            <div id="cart-items">No items in cart.</div>
+            <strong>Total: $<span id="cart-total">0.00</span></strong>
+        </div>
+    </div>
+    <script>
+        const cart = {};
+
+        function addToCart(item, price) {
+            if (cart[item]) {
+                cart[item].qty += 1;
+            } else {
+                cart[item] = { price: price, qty: 1 };
+            }
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItemsDiv = document.getElementById('cart-items');
+            const cartTotalSpan = document.getElementById('cart-total');
+            let html = '';
+            let total = 0;
+            for (const [item, data] of Object.entries(cart)) {
+                html += `<div>${item} x ${data.qty} = $${(data.price * data.qty).toFixed(2)}</div>`;
+                total += data.price * data.qty;
+            }
+            cartItemsDiv.innerHTML = html || 'No items in cart.';
+            cartTotalSpan.textContent = total.toFixed(2);
+        }
+    </script>
+</body>
+</html>
